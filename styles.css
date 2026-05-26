@@ -325,6 +325,25 @@ main,
   color: var(--muted);
 }
 
+.next-appointment {
+  display: grid;
+  gap: 6px;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(31, 122, 92, 0.08), rgba(255, 255, 255, 0.86));
+  border: 1px solid rgba(31, 122, 92, 0.12);
+}
+
+.next-appointment strong {
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.next-appointment span {
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .vitals strong,
 .stat-card strong {
   display: block;
