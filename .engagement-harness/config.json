@@ -62,7 +62,7 @@
   },
   "feedback": {
     "enabled": true,
-    "autoCollect": false
+    "autoCollect": true
   },
   "reports": {
     "formats": [
