@@ -1,0 +1,144 @@
+{
+  "lastUpdated": "2026-05-26T19:58:19.664Z",
+  "totalEntries": 4,
+  "byState": {
+    "accepted": 4,
+    "false_positive": 0,
+    "fixed": 0,
+    "dismissed": 0,
+    "acknowledged": 0,
+    "ignored": 0
+  },
+  "byAgent": {
+    "reviewer": {
+      "totalFindings": 1,
+      "feedback": {
+        "accepted": 1
+      },
+      "acceptanceRate": 1,
+      "falsePositiveRate": 0
+    },
+    "testing": {
+      "totalFindings": 1,
+      "feedback": {
+        "accepted": 1
+      },
+      "acceptanceRate": 1,
+      "falsePositiveRate": 0
+    },
+    "sre-observability": {
+      "totalFindings": 1,
+      "feedback": {
+        "accepted": 1
+      },
+      "acceptanceRate": 1,
+      "falsePositiveRate": 0
+    },
+    "design-principles": {
+      "totalFindings": 1,
+      "feedback": {
+        "accepted": 1
+      },
+      "acceptanceRate": 1,
+      "falsePositiveRate": 0
+    }
+  },
+  "entries": [
+    {
+      "findingId": "EH-REVIEWER-001",
+      "runId": "2026-05-26T19-56-23Z",
+      "state": "accepted",
+      "prNumber": 1,
+      "repository": "abhishikthmeesala-2000/create-a-simple-front-end-healthcare",
+      "commentId": 4548181535,
+      "reactions": {
+        "+1": 1,
+        "-1": 0,
+        "laugh": 0,
+        "confused": 0,
+        "heart": 0,
+        "hooray": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "timestamp": "2026-05-26T19:58:18.927Z",
+      "metadata": {
+        "sourceAgent": "reviewer",
+        "dimension": "correctness",
+        "severity": "high"
+      }
+    },
+    {
+      "findingId": "EH-testing-1",
+      "runId": "2026-05-26T19-56-23Z",
+      "state": "accepted",
+      "prNumber": 1,
+      "repository": "abhishikthmeesala-2000/create-a-simple-front-end-healthcare",
+      "commentId": 4548181667,
+      "reactions": {
+        "+1": 1,
+        "-1": 0,
+        "laugh": 0,
+        "confused": 0,
+        "heart": 0,
+        "hooray": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "timestamp": "2026-05-26T19:58:19.155Z",
+      "metadata": {
+        "sourceAgent": "testing",
+        "dimension": "testing",
+        "severity": "medium"
+      }
+    },
+    {
+      "findingId": "EH-OBS-001",
+      "runId": "2026-05-26T19-56-23Z",
+      "state": "accepted",
+      "prNumber": 1,
+      "repository": "abhishikthmeesala-2000/create-a-simple-front-end-healthcare",
+      "commentId": 4548181792,
+      "reactions": {
+        "+1": 1,
+        "-1": 0,
+        "laugh": 0,
+        "confused": 0,
+        "heart": 0,
+        "hooray": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "timestamp": "2026-05-26T19:58:19.400Z",
+      "metadata": {
+        "sourceAgent": "sre-observability",
+        "dimension": "observability",
+        "severity": "medium"
+      }
+    },
+    {
+      "findingId": "EH-design-001",
+      "runId": "2026-05-26T19-56-23Z",
+      "state": "accepted",
+      "prNumber": 1,
+      "repository": "abhishikthmeesala-2000/create-a-simple-front-end-healthcare",
+      "commentId": 4548182071,
+      "reactions": {
+        "+1": 1,
+        "-1": 0,
+        "laugh": 0,
+        "confused": 0,
+        "heart": 0,
+        "hooray": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "timestamp": "2026-05-26T19:58:19.663Z",
+      "metadata": {
+        "sourceAgent": "design-principles",
+        "dimension": "design",
+        "severity": "medium"
+      }
+    }
+  ]
+}
