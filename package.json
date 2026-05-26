@@ -1,0 +1,9 @@
+{
+  "name": "care-nest-healthcare-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A simple front-end healthcare dashboard built with vanilla HTML, CSS, and JavaScript.",
+  "scripts": {
+    "start": "python3 -m http.server 4173"
+  }
+}

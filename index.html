@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareNest | Healthcare Dashboard</title>
+    <meta
+      name="description"
+      content="A simple front-end healthcare dashboard with appointments, care plans, and quick triage guidance."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-left"></div>
+    <div class="ambient ambient-right"></div>
+
+    <div class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">C</div>
+          <div>
+            <p class="eyebrow">Connected care</p>
+            <h1>CareNest</h1>
+          </div>
+        </div>
+
+        <nav class="topnav" aria-label="Primary">
+          <a href="#overview">Overview</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#services">Services</a>
+        </nav>
+
+        <button class="ghost-button" type="button" id="refreshStatus">
+          Refresh status
+        </button>
+      </header>
+
+      <main>
+        <section class="hero" id="overview">
+          <div class="hero-copy">
+            <p class="eyebrow">Today at a glance</p>
+            <h2>Manage care with a calm, clear dashboard.</h2>
+            <p class="lead">
+              A simple healthcare front end for appointments, medication
+              tracking, and quick guidance when a patient needs next steps.
+            </p>
+
+            <div class="hero-actions">
+              <a class="primary-button" href="#schedule">View appointments</a>
+              <a class="secondary-button" href="#services">Explore services</a>
+            </div>
+
+            <div class="pill-row" aria-label="Quick stats">
+              <span class="pill">Average wait: 14 min</span>
+              <span class="pill">92% check-in complete</span>
+              <span class="pill">3 follow-ups due</span>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="Care summary">
+            <div class="hero-card-header">
+              <div>
+                <p class="card-label">Patient summary</p>
+                <h3>Amelia Parker</h3>
+              </div>
+              <span class="status status-good" id="connectionStatus">Stable</span>
+            </div>
+
+            <div class="vitals">
+              <article>
+                <span>Blood pressure</span>
+                <strong>118 / 76</strong>
+              </article>
+              <article>
+                <span>Heart rate</span>
+                <strong>72 bpm</strong>
+              </article>
+              <article>
+                <span>Medication</span>
+                <strong>On track</strong>
+              </article>
+            </div>
+
+            <div class="progress-block">
+              <div class="progress-copy">
+                <span>Care plan progress</span>
+                <strong>78%</strong>
+              </div>
+              <div class="progress-bar" aria-hidden="true">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+
+            <p class="support-copy">
+              Next clinical check-in is scheduled for 2:30 PM, with lab results
+              ready for review.
+            </p>
+          </aside>
+        </section>
+
+        <section class="stats-grid" aria-label="Operational metrics">
+          <article class="stat-card">
+            <p>Active visits</p>
+            <strong>08</strong>
+            <span>3 in virtual care, 5 in clinic</span>
+          </article>
+          <article class="stat-card">
+            <p>Open tasks</p>
+            <strong>12</strong>
+            <span>Refills, referrals, and follow-ups</span>
+          </article>
+          <article class="stat-card">
+            <p>Care team</p>
+            <strong>04</strong>
+            <span>Primary care, nursing, lab, billing</span>
+          </article>
+          <article class="stat-card">
+            <p>Adherence</p>
+            <strong>96%</strong>
+            <span>Medications taken on schedule</span>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel" id="schedule">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Schedule</p>
+                <h3>Appointments for today</h3>
+              </div>
+              <span class="subtle-chip">Central time</span>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="time">9:00</div>
+                <div class="timeline-card">
+                  <h4>Follow-up telehealth visit</h4>
+                  <p>Dr. Carter reviews blood pressure trends and medication response.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="time">11:30</div>
+                <div class="timeline-card">
+                  <h4>Lab specimen drop-off</h4>
+                  <p>Fasting panel and A1C sample intake at the downtown clinic.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="time">2:30</div>
+                <div class="timeline-card highlighted">
+                  <h4>Care coordination check-in</h4>
+                  <p>Confirm referrals, update the treatment plan, and send after-visit notes.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="time">4:00</div>
+                <div class="timeline-card">
+                  <h4>Prescription refill review</h4>
+                  <p>Pharmacy queue confirms the refill and delivery estimate.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel action-panel" id="services">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Quick guidance</p>
+                <h3>What do you need help with?</h3>
+              </div>
+              <button class="ghost-button compact" type="button" id="resetTriage">
+                Reset
+              </button>
+            </div>
+
+            <label class="field">
+              <span>Choose a concern</span>
+              <select id="concernSelect">
+                <option value="refill">Medication refill</option>
+                <option value="fever">Fever or flu symptoms</option>
+                <option value="blood-pressure">Blood pressure check</option>
+                <option value="insurance">Insurance or billing help</option>
+              </select>
+            </label>
+
+            <div class="triage-card" id="triageCard" aria-live="polite">
+              <span class="status status-neutral" id="triageLevel">Routine</span>
+              <h4 id="triageTitle">Medication refill</h4>
+              <p id="triageText">
+                Refills are usually handled within one business day. We can send
+                the request to the pharmacy queue right away.
+              </p>
+              <button class="primary-button full-width" type="button" id="triageButton">
+                Send refill request
+              </button>
+              <p class="action-note" id="actionNote">Ready to send a pharmacy request.</p>
+            </div>
+
+            <div class="service-grid">
+              <article class="service-card">
+                <h4>Virtual care</h4>
+                <p>Secure video visits for quick follow-ups and routine questions.</p>
+              </article>
+              <article class="service-card">
+                <h4>Lab results</h4>
+                <p>View test summaries with clear notes and next-step guidance.</p>
+              </article>
+              <article class="service-card">
+                <h4>Care team chat</h4>
+                <p>Message nursing support for scheduling, refills, and check-in notes.</p>
+              </article>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          Demo healthcare UI only. For emergencies, contact local emergency services immediately.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
